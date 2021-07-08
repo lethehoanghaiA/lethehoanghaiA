@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>TODO LIST</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>TO-DO LIST</h1>
+			<hr />
+			<div class="Input-container">
+				<div class="input">
+					<input
+						id = "input_text"
+						type="text"
+						placeholder="What good things you want todo today???"
+					/>
+					<button class = "add-btn" type="submit">Add Task</button>
+				</div>
+			</div>
+
+			<div class="filter">
+				<select name="View-only" id="job-viewer">
+					<option value="1" >All job</option>
+					<option value="2">Done</option>
+					<option value="3">Not done</option>
+				</select>
+				<button class = "btn_sort" >Sort</button>
+			</div>
+
+			<div class="list-container">
+				<div class="items-container">
+					<div class="check-done" "checked">
+						<input type="checkbox" />
+						<p>WATCH LIONEL MESSI PLAY</p>
+					</div>
+					<div class="button">
+						<button>
+							<img
+								src="./img/Edit_icon_(the_Noun_Project_30184).svg.png"
+								alt=""
+							/>
+						</button>
+						<button>
+							<img src="./img/trash-can-icon-vector-13490171.jpg" alt="" />
+						</button>
+					</div>
+				</div>
+				<br />
+			</div>
+		</div>
+
+		<script src="./java.js"></script>
+	</body>
+</html>

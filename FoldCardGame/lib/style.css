@@ -1,0 +1,252 @@
+.container{
+    /* height: 85vh; */
+    background-color: blanchedalmond;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    position: relative; /*for modal */
+}
+
+.control-wrapper {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.control, .info {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    background-color: brown;
+    height: 50px;
+    width: auto;
+    color: white;
+}
+
+.control {
+    background-color: blue;
+    height: 50px;
+    width: auto;
+    color: white;
+}
+
+.control * {
+    margin: 10px;
+}
+
+.info * {
+    margin: 10px;
+}
+
+.board {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 15px; 
+    justify-content: space-around;
+    background-color: aqua;
+    width: 100%;
+    margin: auto;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /* column-gap: 20px; */
+    padding-top:40px;
+    padding-bottom: 60px;
+}
+
+/* Time Bar */
+/* Empty */
+.TimeBar{
+    margin: 20px;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(219, 161, 34);
+    margin: auto;
+    position:relative ;
+}
+
+/* make it stick */
+div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* LoadingBar */
+#loadingTimeBar{
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: green;
+    height: 100%;
+    width: 0%;
+}
+
+/* styling card and animation fold */
+.flip-card{
+    background-color: transparent;
+    transition: 1s transform;
+    transform-style: preserve-3d; /* this line is no Joke */
+}
+
+.card{
+    height: 250px;
+    width: 175px;
+    background-color:black;
+    position: relative;
+    /* background-color: transparent; */
+}
+
+
+.flip-card:hover .card {
+    cursor: pointer;
+    /* transform: rotateY(180deg);
+    transition: transform 0.8s;
+    This is the KEY to All it works nicely 
+    transform-style: preserve-3d; 
+    Remove this if you don't want the 3D effect 
+    perspective: 1000px;  */
+}
+
+.card .front {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;    
+}
+
+.card .front img {
+    overflow: hidden;
+    width:100%; 
+    height: 100%;   
+}
+
+.card .back {
+    transform: rotateY(180deg) rotate(90deg);
+    height: 175px;
+    width: 250px;
+    position: absolute;
+    top: 15%;
+    left:-22%;
+}
+
+.card .back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/*this not-existed class used to flip card when CLICKED into and be linked to JS toggle Function*/
+.flipped {
+    transform: rotateY(180deg) rotate(90deg) translateX(-12.5%) translateY(10%);
+    transition: transform 0.8s;
+    /* This is the KEY to All it works nicely */
+    transform-style: preserve-3d; 
+    /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; 
+}
+.flipped-down {
+    transform: rotateY(0deg);
+    transition-delay: 2s;
+    transition: transform 0.8s;
+    /* This is the KEY to All it works nicely */
+    transform-style: preserve-3d; 
+    /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; 
+}
+.hidden {
+    opacity: 0;
+}
+
+/* Pop up menu style */
+/* The Modal (background) */
+#myModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    margin: auto;
+    
+}
+
+
+.modal-content {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px 30px 70px;
+  }
+
+
+.modal-content button.close {
+      width: 30px;
+      font-size: 40px;
+      color: red;
+      align-self: flex-end;
+      background-color: transparent;
+      border: none;
+      margin-bottom: 10px;
+}
+
+.modal-content img {
+      width: 82px;
+      margin-bottom: 15px;
+}
+
+.modal-content input, select {
+      margin-bottom: 40px;
+      font-size: 18px;
+}
+
+#submit-btn {
+    background-color: #ed6755;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    padding: 14px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+  
+
+/* btn music play */
+#youtube-audio img {
+    display: none;
+    
+}
+
+#youtube-audio{
+    width: 0px;
+    height: 0px;
+    margin:0;
+    padding:0;
+}

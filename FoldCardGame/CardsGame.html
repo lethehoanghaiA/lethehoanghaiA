@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Game - Animal</title>
+    <link rel="stylesheet" href="/lib/style.css">
+</head>
+
+<body>
+    <!-- Audio Youtube -->
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/r2ck3fF9x0I" title="YouTube video player" frameborder="5" allow="autoplay"></iframe>    
+    -->
+    
+    <div class="container">
+        <h1>Welcome Players to the FANTASIC game</h1>
+        <p>SHow me what you got</p>
+
+        <div class="control-wrapper">
+            <div class="control">
+                <p>CONTROL here</p>
+                <button class="start">New Game
+                    <div data-video="r2ck3fF9x0I" data-autoplay="1"data-loop="3"
+                        id="youtube-audio" class= "hidden" style="display: inline-block;">
+                    </div>
+                </button>
+                <div class="helper"></div>
+                <button class="change-background">Theme mode</button>
+            </div>
+
+            <div class="info">
+                <p>Time: <span class="infoTime"></span></p>
+                <p>Player: <span class="infoName"></span></p>
+                <p>Score: <span class="infoScore"></span></p>
+            </div>            
+        </div>
+
+        <div class="TimeBar sticky">
+            <div id="loadingTimeBar"></div>
+        </div>
+        <main class="board">
+            
+            <!-- <div class="flip-card">
+                <div class="card" onclick= "revealCard()">
+                    <div class="front" >
+                        <img src="./lib/backface.png" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="./lib/ferrari.jpg" alt="">
+                    </div>
+                </div>
+            </div>  -->
+ 
+        </main>
+
+        <!-- modal -->
+        <div id="myModal">
+            <!-- an overlay to close when clickout -->
+            <div class ="modal-content">            
+                <!-- close btn -->
+                <button class="close">&times;</button>
+                <img src="https://www.flaticon.com/svg/static/icons/svg/2913/2913782.svg" alt="cookies-img" />
+                <!-- form -->
+                <form action="">
+                    Player Name:<input type="text" placeholder="PlayerName" id="playerName"> <br/>
+                    Choose difficulty: 
+                    <select id="level">
+                        <option value="4" selected="selected">easy</option>
+                        <option value="8">medium</option>
+                        <option value="12">hard</option>
+                    </select> <br/>
+                    
+                    Set time:
+                    <select id="time">
+                        <option value="1" selected="selected">1 min</option>
+                        <option value="2">2 min</option>
+                        <option value="3">4 min</option>
+                    </select> <br/>
+                    <button id="submit-btn" onclick="startGame(); return false;">Submit</button>
+                    
+                </form>
+            
+            </div>
+
+        </div>
+        
+
+    </div>
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+    <script src="/lib/gameControl.js"></script>
+</body>
+</html>
