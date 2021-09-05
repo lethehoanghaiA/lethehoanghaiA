@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Merienda', cursive;
 }
 
 body {
@@ -9,60 +12,45 @@ body {
     background-size: cover;
 }
 
-.container {
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-
-}
 
 main{
-    background-color: beige;
-    width: 60%;
-    height: 550px;
+    background-color: white;
     margin: auto;
     display: flex;
+    /* //make item streatch all heght */
+    justify-content: stretch;
+    min-height: 60vh;
 }
 
 .heading {
     text-align: center;
+    background-color: rgb(79, 146, 212,0.8);
 }
 
 .heading h1{
-    background-color: rgb(79, 146, 212,0.8);
     margin-top: 60px;
     color: Black;
 }
 
 .heading h2, .heading h3 {
-    background-color:  rgb(79, 146, 212,0.8);
     color: yellow;
 }
 .heading span {
     color: black;
 }
 
-.min-size {
-    min-width: 700px;
-}
 
 .left {
-    height: 100%;
     flex: 60%;
 }
 
 .right {
-    height: 100%;
     flex: 40%;
 }
 
 .left{
     background-image: url("luke-chesser-rCOWMC8qf8A-unsplash.jpg");
-    background-attachment:fixed;
+    /* background-attachment:fixed; */
     background-size:contain;
     text-align: center;
     display: flex;
@@ -84,28 +72,23 @@ main{
     padding-right: 10px;
 }
 
-#btn_submit{
-    font-size: 16px;
-    font-family: "Rubik", sans-serif;
-    padding: 12px 35px;
-    font-weight: 700;
-    color: BLACK;
-    background-color: rgb(255, 123, 0.6);
-    border-radius: 40px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    display: inline-block; 
-    margin-top: 16px;
-    
-}
-
-#btn_submit:hover {
-    transform: scale(1.2);
-    color: crimson;
-    background-color: white;
-}
 
 input{
     height: 30px;
     text-align: center;
 }
+
+@media only screen and (max-width: 850px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left{
+        flex:100%;
+        min-height: 350px;
+    }
+
+    .right{
+        flex:100%;
+    }
+  }
